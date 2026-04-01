@@ -3,119 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KANG STUDIO | The 2026 Collection</title>
+    <title>KANG STUDIO | Editorial</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --luxury-cream: #F9F9F7; --luxury-black: #1a1a1a; }
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--luxury-black); scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
-        
-        /* 4. MICRO-INTERACTIONS: Smooth Transitions */
-        .fade-in { animation: fadeIn 1.5s ease-out forwards; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* 6. NAV UPGRADE: Hide on scroll, show on hover */
-        header { transition: transform 0.4s ease, background-color 0.4s ease; }
-        .nav-hidden { transform: translateY(-100%); }
-
-        /* 8. BRAND IDENTITY: Custom Scrollbar */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #000; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .letter-spacing-huge { letter-spacing: 0.6em; }
     </style>
 </head>
-<body class="selection:bg-black selection:text-white">
+<body class="bg-white">
 
-    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-fashion-model-leaning-against-a-wall-34444-large.mp4" type="video/mp4">
-        </video>
-        
-        <nav class="absolute top-0 w-full flex justify-between items-center px-6 md:px-12 py-8 z-50 text-white">
-            <div class="flex gap-8 text-[10px] uppercase tracking-[0.3em] font-medium hidden md:flex">
-                <a href="#shop" class="hover:opacity-50 transition">Atelier</a>
-                <a href="#editorial" class="hover:opacity-50 transition">Editorial</a>
-            </div>
-            <div class="text-xl md:text-2xl tracking-[0.6em] uppercase font-light">KANG STUDIO</div>
-            <div class="flex gap-8 text-[10px] uppercase tracking-[0.3em] font-medium">
-                <a href="#" class="hover:opacity-50 transition">Cart (0)</a>
-            </div>
-        </nav>
+    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-8 z-50 mix-blend-difference text-white">
+        <div class="text-[10px] uppercase tracking-[0.4em] font-bold">
+            <a href="#campaign" class="hover:opacity-50 transition">Journal</a>
+        </div>
+        <a href="/" class="text-2xl tracking-[0.6em] uppercase font-light">KANG STUDIO</a>
+        <div class="text-[10px] uppercase tracking-[0.4em] font-bold">
+            <a href="#shop" class="hover:opacity-50 transition">Shop</a>
+        </div>
+    </nav>
 
-        <div class="relative z-10 text-center text-white space-y-6 fade-in">
-            <h1 class="text-5xl md:text-8xl font-light italic serif tracking-tight">The Summer Uniform.</h1>
-            <p class="text-[10px] uppercase tracking-[0.5em] font-extralight">Spring / Summer 2026 Collection</p>
-            <div class="pt-8">
-                <a href="#shop" class="border border-white px-10 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500">Explore Pieces</a>
+    <section id="campaign" class="relative h-screen flex items-center justify-center bg-zinc-900 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-80" alt="Editorial Hero">
+        <div class="relative z-10 text-center text-white space-y-4">
+            <p class="text-[9px] uppercase tracking-[0.8em] font-light mb-4">The Editorial / Series 01</p>
+            <h1 class="text-6xl md:text-9xl serif italic font-light leading-none">Soft Form.</h1>
+            <p class="text-[11px] uppercase tracking-[0.4em] pt-6 italic font-light">Captured in Lower Manhattan / 05:42 AM</p>
+        </div>
+    </section>
+
+    <section class="py-40 px-6 max-w-3xl mx-auto text-center">
+        <div class="reveal">
+            <p class="text-[10px] uppercase tracking-[0.5em] text-zinc-400 mb-12 font-bold italic">The Narrative</p>
+            <h2 class="text-3xl md:text-5xl serif italic leading-snug font-light mb-12">
+                "Built for slow mornings and late nights. A study in the geometry of silk and the weight of silence."
+            </h2>
+            <div class="w-16 h-[1px] bg-black mx-auto"></div>
+        </div>
+    </section>
+
+    <section class="px-6 md:px-12 space-y-32 pb-40">
+        <div class="grid md:grid-cols-12 gap-8 items-center reveal">
+            <div class="md:col-span-7 aspect-[4/5] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-[3s]">
+            </div>
+            <div class="md:col-span-5 md:pl-12 space-y-6">
+                <p class="text-[9px] uppercase tracking-[0.4em] font-bold text-zinc-400">Look 01</p>
+                <h3 class="text-4xl serif italic">The Off-Duty Uniform</h3>
+                <p class="text-zinc-500 font-light leading-relaxed max-w-sm">A fusion of oversized tailoring and delicate textures. Designed to move with the body, not against it.</p>
+                <a href="#shop" class="inline-block text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1 mt-4 hover:opacity-50 transition">Shop the Look</a>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-8 items-center reveal">
+            <div class="md:col-span-5 md:pr-12 space-y-6 text-right order-2 md:order-1">
+                <p class="text-[9px] uppercase tracking-[0.4em] font-bold text-zinc-400">Look 02</p>
+                <h3 class="text-4xl serif italic">Sovereign Proportions</h3>
+                <p class="text-zinc-500 font-light leading-relaxed max-w-sm ml-auto">Exploring the architectural strength of the Sculpt Blazer against the fluidity of the Divinity Slip.</p>
+                <a href="#shop" class="inline-block text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1 mt-4 hover:opacity-50 transition">Discover More</a>
+            </div>
+            <div class="md:col-span-7 aspect-[4/5] overflow-hidden order-1 md:order-2">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-[3s]">
             </div>
         </div>
     </section>
 
-    <div class="py-12 border-b border-zinc-100 bg-white">
-        <div class="max-w-5xl mx-auto flex justify-between items-center px-6 opacity-30 grayscale">
-            <span class="text-sm font-bold serif italic">VOGUE</span>
-            <span class="text-sm font-bold tracking-tighter">Hypebeast</span>
-            <span class="text-sm font-semibold uppercase">Elle</span>
-            <span class="text-sm font-serif">GQ</span>
-        </div>
-    </div>
-
-    <section id="editorial" class="py-32 px-6 grid md:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
-        <div class="space-y-8 fade-in">
-            <h2 class="text-[10px] uppercase tracking-[0.4em] text-zinc-400 font-bold">Campaign 01</h2>
-            <h3 class="text-4xl md:text-6xl serif italic leading-tight">"City Nights & <br>Sovereign Silks"</h3>
-            <p class="text-zinc-500 font-light leading-relaxed max-w-md">Our inaugural collection explores the intersection of movement and structure. Shot on location in New York City, featuring our signature Sculpt silhouette.</p>
-            <a href="#" class="inline-block text-[10px] uppercase tracking-[0.3em] border-b border-black pb-2 font-bold hover:opacity-50 transition">View Lookbook</a>
-        </div>
-        <div class="aspect-[4/5] bg-zinc-100 overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-[2s]">
-        </div>
-    </section>
-
-    <section id="shop" class="py-32 bg-zinc-50 px-6">
+    <section id="shop" class="py-32 bg-zinc-50 px-6 border-t border-zinc-100">
         <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-16">
-                <h2 class="text-3xl serif italic">Selected Pieces</h2>
-                <a href="#" class="text-[10px] uppercase tracking-widest border-b border-zinc-300 pb-1">Shop All</a>
+            <div class="text-center mb-24">
+                <h2 class="text-[10px] uppercase tracking-[0.6em] font-bold mb-4">Featured in this story</h2>
+                <p class="serif italic text-4xl">Shop the Editorial</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-12">
-                <div class="group">
+                <div class="group reveal">
                     <div class="aspect-[3/4] relative overflow-hidden bg-white mb-6">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 group-hover:opacity-0">
-                        <img src="https://images.unsplash.com/photo-1548624149-f7b31663fd5f?q=80&w=1000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <div class="absolute top-4 right-4 bg-black text-white text-[8px] px-2 py-1 tracking-widest uppercase">Only 3 Left</div>
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-black text-white text-[8px] px-2 py-1 tracking-widest uppercase">Limited Release</div>
                     </div>
-                    <div class="flex justify-between items-start px-2">
-                        <div>
-                            <h4 class="serif italic text-lg">The Sculpt Blazer</h4>
-                            <p class="text-[9px] text-zinc-400 uppercase tracking-widest mt-1">Sovereign Taupe</p>
-                        </div>
-                        <p class="text-sm font-light">$228</p>
+                    <div class="text-center">
+                        <h4 class="serif italic text-xl">The Sculpt Blazer</h4>
+                        <p class="text-[9px] text-zinc-400 uppercase tracking-widest mt-1 mb-6">$228</p>
+                        <a href="https://buy.stripe.com/test_00w3cv4JPc3E0lX0ce3F600" target="_blank" class="block border border-black py-4 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-black hover:text-white transition">Purchase Piece</a>
                     </div>
-                    <a href="https://buy.stripe.com/test_00w3cv4JPc3E0lX0ce3F600" class="block mt-6">
-                        <button class="w-full bg-black text-white py-4 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-zinc-800 transition shadow-xl">Purchase Piece</button>
-                    </a>
                 </div>
                 </div>
         </div>
     </section>
 
-    <section class="py-32 px-6 bg-white text-center border-t border-zinc-100">
-        <div class="max-w-2xl mx-auto space-y-8">
-            <h2 class="text-[10px] uppercase tracking-[0.5em] font-bold">Join the Inner Circle</h2>
-            <p class="serif italic text-3xl">Access the Private Sale.</p>
-            <div class="flex max-w-md mx-auto border-b border-black pb-2">
-                <input type="email" placeholder="ENTRE YOUR EMAIL" class="w-full bg-transparent outline-none text-[10px] tracking-widest uppercase">
-                <button class="text-[10px] font-bold uppercase tracking-widest">Submit</button>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black text-white py-20 px-6 text-center">
-        <p class="text-[9px] tracking-[0.5em] uppercase font-light opacity-50">© 2026 KANG STUDIO — ALL RIGHTS RESERVED</p>
+    <footer class="py-20 text-center bg-white">
+        <p class="text-[8px] tracking-[0.6em] uppercase opacity-30">© 2026 KANG STUDIO ATELIER / NEW YORK — SEOUL</p>
     </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 
 </body>
 </html>
