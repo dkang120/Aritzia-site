@@ -3,99 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KANG STUDIO | Editorial</title>
+    <title>KANG STUDIO | The Minimalist Edit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; scroll-behavior: smooth; }
+        :root { --luxury-grey: #f7f7f7; --luxury-black: #111111; }
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: var(--luxury-black); scroll-behavior: smooth; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        
+        /* FADE-IN TRANSITION: The Luxury Flow */
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1.2s ease-out, transform 1.2s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .letter-spacing-huge { letter-spacing: 0.6em; }
+        
+        /* HOVER INTERACTIONS: Slow & Intentional */
+        .btn-luxury { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid currentColor; text-transform: uppercase; letter-spacing: 0.3em; font-size: 10px; font-weight: bold; }
+        .btn-luxury:hover { background-color: #fff; color: #000; transform: translateY(-2px); border-color: #fff; }
+
+        /* VIDEO HERO: Centralized & Sparse */
+        .hero-title { opacity: 0; animation: fadeUpTitle 2s 0.5s forwards; }
+        @keyframes fadeUpTitle { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-white">
+<body class="selection:bg-black selection:text-white">
 
-    <nav class="fixed top-0 w-full flex justify-between items-center px-8 py-8 z-50 mix-blend-difference text-white">
-        <div class="text-[10px] uppercase tracking-[0.4em] font-bold">
-            <a href="#campaign" class="hover:opacity-50 transition">Journal</a>
-        </div>
-        <a href="/" class="text-2xl tracking-[0.6em] uppercase font-light">KANG STUDIO</a>
-        <div class="text-[10px] uppercase tracking-[0.4em] font-bold">
-            <a href="#shop" class="hover:opacity-50 transition">Shop</a>
-        </div>
-    </nav>
-
-    <section id="campaign" class="relative h-screen flex items-center justify-center bg-zinc-900 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-80" alt="Editorial Hero">
-        <div class="relative z-10 text-center text-white space-y-4">
-            <p class="text-[9px] uppercase tracking-[0.8em] font-light mb-4">The Editorial / Series 01</p>
-            <h1 class="text-6xl md:text-9xl serif italic font-light leading-none">Soft Form.</h1>
-            <p class="text-[11px] uppercase tracking-[0.4em] pt-6 italic font-light">Captured in Lower Manhattan / 05:42 AM</p>
-        </div>
-    </section>
-
-    <section class="py-40 px-6 max-w-3xl mx-auto text-center">
-        <div class="reveal">
-            <p class="text-[10px] uppercase tracking-[0.5em] text-zinc-400 mb-12 font-bold italic">The Narrative</p>
-            <h2 class="text-3xl md:text-5xl serif italic leading-snug font-light mb-12">
-                "Built for slow mornings and late nights. A study in the geometry of silk and the weight of silence."
-            </h2>
-            <div class="w-16 h-[1px] bg-black mx-auto"></div>
-        </div>
-    </section>
-
-    <section class="px-6 md:px-12 space-y-32 pb-40">
-        <div class="grid md:grid-cols-12 gap-8 items-center reveal">
-            <div class="md:col-span-7 aspect-[4/5] overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-[3s]">
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black text-white text-center">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-fashion-model-leaning-against-a-wall-34444-large.mp4" type="video/mp4">
+        </video>
+        
+        <nav class="absolute top-0 w-full flex justify-between items-center px-12 py-8 z-50 text-white">
+            <div class="flex gap-10 text-[10px] uppercase tracking-[0.3em] font-light hidden md:flex">
+                <a href="#atelier" class="hover:opacity-60 transition">Atelier</a>
             </div>
-            <div class="md:col-span-5 md:pl-12 space-y-6">
-                <p class="text-[9px] uppercase tracking-[0.4em] font-bold text-zinc-400">Look 01</p>
-                <h3 class="text-4xl serif italic">The Off-Duty Uniform</h3>
-                <p class="text-zinc-500 font-light leading-relaxed max-w-sm">A fusion of oversized tailoring and delicate textures. Designed to move with the body, not against it.</p>
-                <a href="#shop" class="inline-block text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1 mt-4 hover:opacity-50 transition">Shop the Look</a>
+            <div class="text-2xl tracking-[0.6em] uppercase font-light">KANG STUDIO</div>
+            <div class="flex gap-10 text-[10px] uppercase tracking-[0.3em] font-light">
+                <a href="#" class="hover:opacity-60 transition">Cart (0)</a>
             </div>
-        </div>
+        </nav>
 
-        <div class="grid md:grid-cols-12 gap-8 items-center reveal">
-            <div class="md:col-span-5 md:pr-12 space-y-6 text-right order-2 md:order-1">
-                <p class="text-[9px] uppercase tracking-[0.4em] font-bold text-zinc-400">Look 02</p>
-                <h3 class="text-4xl serif italic">Sovereign Proportions</h3>
-                <p class="text-zinc-500 font-light leading-relaxed max-w-sm ml-auto">Exploring the architectural strength of the Sculpt Blazer against the fluidity of the Divinity Slip.</p>
-                <a href="#shop" class="inline-block text-[10px] uppercase tracking-[0.3em] border-b border-black pb-1 mt-4 hover:opacity-50 transition">Discover More</a>
-            </div>
-            <div class="md:col-span-7 aspect-[4/5] overflow-hidden order-1 md:order-2">
-                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=2000&auto=format&fit=crop" class="w-full h-full object-cover hover:scale-105 transition duration-[3s]">
+        <div class="relative z-10 space-y-8 hero-title px-6">
+            <h1 class="text-6xl md:text-9xl font-light italic serif tracking-tight leading-none">Soft Form.</h1>
+            <p class="text-[11px] uppercase tracking-[0.4em] font-extralight text-zinc-300">Spring / Summer 2026 Collection</p>
+            <div class="pt-10">
+                <a href="#atelier" class="btn-luxury inline-block px-12 py-4">Explore Series</a>
             </div>
         </div>
     </section>
 
-    <section id="shop" class="py-32 bg-zinc-50 px-6 border-t border-zinc-100">
+    <section id="atelier" class="py-40 bg-white px-6 md:px-12 text-center">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24">
-                <h2 class="text-[10px] uppercase tracking-[0.6em] font-bold mb-4">Featured in this story</h2>
-                <p class="serif italic text-4xl">Shop the Editorial</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-12">
+            
+            <p class="text-[10px] uppercase tracking-[0.4em] font-bold text-zinc-400 mb-20 reveal">Series 01 // The Silk Study</p>
+            
+            <div class="grid md:grid-cols-3 gap-16 md:gap-8">
                 <div class="group reveal">
-                    <div class="aspect-[3/4] relative overflow-hidden bg-white mb-6">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                        <div class="absolute top-4 right-4 bg-black text-white text-[8px] px-2 py-1 tracking-widest uppercase">Limited Release</div>
+                    <div class="aspect-[3/4] overflow-hidden mb-6 bg-zinc-50 relative">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-[2s]">
+                        <div class="absolute top-4 right-4 bg-black text-white text-[8px] px-2 py-1 tracking-widest uppercase font-bold">Only 3 Left</div>
                     </div>
-                    <div class="text-center">
-                        <h4 class="serif italic text-xl">The Sculpt Blazer</h4>
-                        <p class="text-[9px] text-zinc-400 uppercase tracking-widest mt-1 mb-6">$228</p>
-                        <a href="https://buy.stripe.com/test_00w3cv4JPc3E0lX0ce3F600" target="_blank" class="block border border-black py-4 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-black hover:text-white transition">Purchase Piece</a>
+                    <div>
+                        <h3 class="serif italic text-xl">The Sculpt Blazer</h3>
+                        <p class="text-zinc-400 text-[10px] uppercase tracking-widest mt-1 mb-8">Sovereign Taupe — $228</p>
+                        <a href="https://buy.stripe.com/test_00w3cv4JPc3E0lX0ce3F600" target="_blank" class="block border border-black py-4 text-[9px] uppercase tracking-[0.3em] font-bold hover:bg-black hover:text-white transition duration-700">Purchase Piece</a>
                     </div>
                 </div>
+                
                 </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center bg-white">
-        <p class="text-[8px] tracking-[0.6em] uppercase opacity-30">© 2026 KANG STUDIO ATELIER / NEW YORK — SEOUL</p>
+    <section class="py-40 px-6 bg-[#F8F8F8] text-center">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="text-[10px] uppercase tracking-[0.4em] font-bold text-zinc-400 mb-10">The Narrative</h2>
+            <p class="text-3xl md:text-5xl serif italic leading-tight font-light mb-12">"Integrity of fiber. Precision of silhouette. A dedication to understated form."</p>
+            <div class="w-16 h-[1px] bg-black mx-auto mt-12"></div>
+        </div>
+    </section>
+
+    <footer class="py-32 px-6 bg-black text-white text-center border-t border-zinc-900">
+        <div class="max-w-xl mx-auto space-y-12">
+            <h2 class="text-3xl serif italic leading-snug">Connect with the <br>KANG Studio Atelier.</h2>
+            <div class="flex border-b border-zinc-700 pb-2 max-w-sm mx-auto">
+                <input type="email" placeholder="ENTRE YOUR EMAIL" class="w-full bg-transparent outline-none text-[10px] tracking-widest uppercase placeholder:text-zinc-600">
+                <button class="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Join</button>
+            </div>
+            <p class="text-zinc-700 text-[9px] tracking-[0.5em] font-light">© 2026 KANG STUDIO — ALL RIGHTS RESERVED</p>
+        </div>
     </footer>
 
     <script>
