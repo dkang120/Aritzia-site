@@ -3,116 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARITZIA | Effortless Luxury</title>
+    <title>KANG STUDIO | Effortless Luxury</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .btn-luxury { transition: all 0.5s; border: 1px solid black; padding: 1rem 3rem; text-transform: uppercase; letter-spacing: 0.2em; font-size: 10px; font-weight: bold; cursor: pointer; }
-        .btn-luxury:hover { background-color: #000; color: #fff; }
-        .fade-in { animation: fadeIn 1.5s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        body { font-family: 'Inter', sans-serif; background-color: #fff; color: #1a1a1a; scroll-behavior: smooth; overflow-x: hidden; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .btn-luxury { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid black; padding: 1rem 2.5rem; text-transform: uppercase; letter-spacing: 0.25em; font-size: 10px; font-weight: bold; }
+        .btn-luxury:hover { background-color: #000; color: #fff; transform: translateY(-2px); }
+        .fade-up { animation: fadeUp 1.2s forwards; opacity: 0; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0; background-color: #000; transition: width 0.4s; }
+        .nav-link:hover::after { width: 100%; }
     </style>
 </head>
 <body>
 
-    <div class="bg-[#F5F5F0] text-[10px] tracking-[0.15em] py-2.5 text-center uppercase font-semibold border-b border-zinc-200">
-        Complimentary Shipping on Orders Over $150
+    <div class="bg-black text-white text-[9px] tracking-[0.3em] py-2 text-center uppercase font-light">
+        Global Atelier Shipping — Complimentary Over $150
     </div>
 
-    <header class="flex justify-between items-center px-10 py-6 sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div class="text-2xl tracking-[0.3em] uppercase font-light">ARITZIA</div>
-        <nav class="hidden md:flex gap-10 text-[11px] uppercase tracking-widest font-medium text-zinc-500">
-            <a href="#shop" class="hover:text-black transition">The Shop</a>
-            <a href="#story" class="hover:text-black transition">Our Story</a>
-        </nav>
-        <div class="flex gap-6 text-[11px] uppercase tracking-widest font-medium">
-            <a href="#" class="hover:text-zinc-400">Bag (0)</a>
+    <header class="flex justify-between items-center px-6 md:px-12 py-8 sticky top-0 bg-white/70 backdrop-blur-md z-50 border-b border-zinc-100">
+        <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-medium hidden md:flex">
+            <a href="#shop" class="nav-link">Shop</a>
+            <a href="#story" class="nav-link">Journal</a>
+        </div>
+        <div class="text-xl md:text-2xl tracking-[0.5em] uppercase font-light ml-4 md:ml-0">KANG STUDIO</div>
+        <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-medium">
+            <a href="#" class="nav-link">Search</a>
+            <a href="#" class="nav-link">Cart (0)</a>
         </div>
     </header>
 
-    <section class="relative h-[85vh] flex items-center justify-center text-center overflow-hidden fade-in">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover brightness-[0.8]" alt="Editorial">
-        <div class="relative z-10 space-y-6">
-            <h1 class="text-white text-5xl md:text-8xl italic font-light tracking-tight">Effortless. Elevated.</h1>
-            <p class="text-white/90 tracking-[0.3em] uppercase text-xs">The Spring Collection</p>
-            <div class="pt-4">
-                <a href="#shop" class="bg-white text-black btn-luxury inline-block">Shop New Arrivals</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="shop" class="max-w-7xl mx-auto py-24 px-10">
-        <div class="flex justify-between items-end mb-16">
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover brightness-[0.9]" alt="Campaign">
+        <div class="relative z-10 text-center space-y-8 fade-up">
+            <p class="text-white tracking-[0.5em] uppercase text-[10px]">Collection 001 — Spring 2026</p>
+            <h1 class="text-white text-6xl md:text-9xl italic font-light tracking-tighter">The Silk Edit.</h1>
             <div>
-                <h2 class="text-4xl italic mb-2">The Essentials</h2>
-                <p class="text-zinc-400 uppercase text-[10px] tracking-widest font-bold">Curated silhouettes for the modern woman</p>
-            </div>
-            <a href="#" class="text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-zinc-400 hover:border-zinc-400 transition">View All</a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="group cursor-pointer">
-                <div class="aspect-[3/4] overflow-hidden mb-4 bg-zinc-100">
-                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                </div>
-                <h3 class="text-lg font-medium tracking-tight italic">The Sculpt Blazer</h3>
-                <p class="text-zinc-500 text-xs uppercase tracking-widest mt-1 mb-3">Sovereign Taupe — $228</p>
-                <button class="text-[9px] uppercase tracking-widest font-black border border-zinc-200 w-full py-3 group-hover:bg-black group-hover:text-white transition">Quick Add +</button>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="aspect-[3/4] overflow-hidden mb-4 bg-zinc-100">
-                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                </div>
-                <h3 class="text-lg font-medium tracking-tight italic">Divinity Slip Dress</h3>
-                <p class="text-zinc-500 text-xs uppercase tracking-widest mt-1 mb-3">Midnight Pearl — $110</p>
-                <button class="text-[9px] uppercase tracking-widest font-black border border-zinc-200 w-full py-3 group-hover:bg-black group-hover:text-white transition">Quick Add +</button>
-            </div>
-
-            <div class="group cursor-pointer">
-                <div class="aspect-[3/4] overflow-hidden mb-4 bg-zinc-100">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
-                </div>
-                <h3 class="text-lg font-medium tracking-tight italic">High-Waist Minimal Pant</h3>
-                <p class="text-zinc-500 text-xs uppercase tracking-widest mt-1 mb-3">Sandstone — $148</p>
-               <a href="PASTE_YOUR_STRIPE_LINK_HERE" target="_blank" class="block w-full">
-    <button class="text-[9px] uppercase tracking-widest font-black border border-zinc-200 w-full py-3 hover:bg-black hover:text-white transition">
-        Quick Add +
-    </button>
-</a>
+                <a href="#shop" class="bg-white text-black btn-luxury inline-block">Explore the Collection</a>
             </div>
         </div>
     </section>
 
-    <section id="story" class="bg-[#F9F9F7] py-24 px-10">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div class="order-2 md:order-1">
-                <img src="https://images.unsplash.com/photo-1534126416832-a88fdf2911c2?q=80&w=1000&auto=format&fit=crop" class="w-full h-[500px] object-cover rounded-sm shadow-xl">
+    <section id="story" class="py-32 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-[10px] uppercase tracking-[0.4em] text-zinc-400 mb-10 font-bold">Our Philosophy</h2>
+        <p class="text-2xl md:text-4xl leading-snug italic font-light text-zinc-800">
+            "Luxury is not found in the excess, but in the precision of the silhouette and the integrity of the fiber."
+        </p>
+        <div class="w-12 h-[1px] bg-black mx-auto mt-12"></div>
+    </section>
+
+    <section id="shop" class="px-6 md:px-12 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+            
+            <div class="group">
+                <div class="aspect-[3/4] overflow-hidden mb-6 bg-zinc-50 relative">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-white px-3 py-1 text-[8px] uppercase tracking-widest font-bold shadow-sm">Limited Release</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl italic">The Sculpt Blazer</h3>
+                        <p class="text-zinc-400 text-[10px] uppercase tracking-widest mt-1">Sovereign Taupe — $228</p>
+                    </div>
+                </div>
+                <a href="YOUR_STRIPE_LINK_HERE" target="_blank" class="block mt-6">
+                    <button class="w-full border border-black py-4 text-[9px] uppercase tracking-[0.3em] font-black hover:bg-black hover:text-white transition-all duration-500">
+                        Purchase Piece
+                    </button>
+                </a>
             </div>
-            <div class="space-y-8 order-1 md:order-2">
-                <h2 class="text-5xl italic leading-tight">Modern craftsmanship for the refined eye.</h2>
-                <p class="text-zinc-600 leading-relaxed font-light">Founded on the principle that luxury should be effortless, we create silhouettes that transition seamlessly from the city to the coast. Every piece is designed with precision, sourced from premium fabrics, and built to last a lifetime.</p>
-                <button class="btn-luxury">Read the Lookbook</button>
+
+            <div class="group">
+                <div class="aspect-[3/4] overflow-hidden mb-6 bg-zinc-50">
+                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                </div>
+                <h3 class="text-xl italic">Divinity Slip Dress</h3>
+                <p class="text-zinc-400 text-[10px] uppercase tracking-widest mt-1">Midnight — $110</p>
+                <button class="w-full border border-zinc-200 mt-6 py-4 text-[9px] uppercase tracking-[0.3em] font-black text-zinc-300 cursor-not-allowed">Sold Out</button>
+            </div>
+
+            <div class="group">
+                <div class="aspect-[3/4] overflow-hidden mb-6 bg-zinc-50">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                </div>
+                <h3 class="text-xl italic">Minimal Trouser</h3>
+                <p class="text-zinc-400 text-[10px] uppercase tracking-widest mt-1">Sandstone — $148</p>
+                <button class="w-full border border-black mt-6 py-4 text-[9px] uppercase tracking-[0.3em] font-black hover:bg-black hover:text-white transition">Quick Add +</button>
             </div>
         </div>
     </section>
 
-    <section class="py-24 text-center px-6">
-        <div class="max-w-xl mx-auto space-y-6">
-            <h2 class="text-4xl italic">Join the Inner Circle.</h2>
-            <p class="text-zinc-400 text-xs uppercase tracking-widest">Sign up for early access to our seasonal edits and exclusive events.</p>
-            <div class="flex border-b border-black pb-2 mt-10">
-                <input type="email" placeholder="Enter your email" class="w-full bg-transparent outline-none text-sm placeholder:text-zinc-300">
-                <button class="text-[10px] uppercase font-bold tracking-widest">Join</button>
+    <section class="bg-[#F9F9F7] py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-[10px] uppercase tracking-[0.4em] mb-20 font-bold">Client Perspectives</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="space-y-4">
+                    <div class="flex gap-1 text-[8px] text-black">★★★★★</div>
+                    <p class="italic text-lg font-light">"The fit of the Sculpt Blazer is unparalleled. It feels like a bespoke piece from a Savile Row tailor."</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold">— Sarah J., New York</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex gap-1 text-[8px] text-black">★★★★★</div>
+                    <p class="italic text-lg font-light">"Minimalism done right. The fabric quality is heavy, luxurious, and drapes beautifully."</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold">— Elena R., London</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex gap-1 text-[8px] text-black">★★★★★</div>
+                    <p class="italic text-lg font-light">"Finally, a brand that understands understated elegance. The customer service was impeccable."</p>
+                    <p class="text-[10px] uppercase tracking-widest font-bold">— Marcus K., Seoul</p>
+                </div>
             </div>
-            <p class="text-[9px] text-zinc-300 italic pt-4">By joining, you agree to our Privacy Policy and Terms of Use.</p>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-zinc-100 text-center">
-        <p class="text-zinc-400 text-[10px] tracking-[0.3em] uppercase font-semibold">© 2026 ARITZIA. REDEFINING LUXURY.</p>
+    <footer class="py-32 px-6 border-t border-zinc-100">
+        <div class="max-w-xl mx-auto text-center space-y-12">
+            <h2 class="text-3xl italic">Stay Informed.</h2>
+            <div class="flex border-b border-black pb-2">
+                <input type="email" placeholder="Email Address" class="w-full bg-transparent outline-none text-xs tracking-widest uppercase placeholder:text-zinc-300">
+                <button class="text-[9px] uppercase font-bold tracking-widest">Join</button>
+            </div>
+            <div class="flex justify-center gap-10 text-[10px] uppercase tracking-widest font-medium text-zinc-400">
+                <a href="#" class="hover:text-black">Instagram</a>
+                <a href="#" class="hover:text-black">Contact</a>
+                <a href="#" class="hover:text-black">Privacy</a>
+            </div>
+            <p class="text-zinc-300 text-[9px] tracking-[0.4em] pt-10">© 2026 KANG STUDIO ATELIER</p>
+        </div>
     </footer>
 
 </body>
